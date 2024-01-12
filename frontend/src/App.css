@@ -1,0 +1,20 @@
+nav {
+  background-color: rgb(30, 30, 109);
+  padding: 20px 40px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+}
+nav ul li {
+  margin-inline: 10px;
+  /* transition: all .1s ease-in-out; */
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav li:hover{
+    scale: 1.2;
+}
