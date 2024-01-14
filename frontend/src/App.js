@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Signup from "./components/Signup";
 import PrivateComponent from "./components/PrivateComponent";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/about" element={<h1>About Page</h1>} />
           <Route path="/contact" element={<h1>Contact Page</h1>} />
         </Route>
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<h1>No Page Found</h1>} />
       </Routes>
