@@ -18,3 +18,10 @@ nav a {
 nav li:hover{
     scale: 1.2;
 }
+.logout-btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
