@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const isLogedIn=localStorage.getItem('user')
-  const navigate=useNavigate()
-  const handleLogout=()=>{
-    localStorage.removeItem('user');
-    navigate('/signup')
-  }
+  const isLogedIn = localStorage.getItem("user");
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/signup");
+  };
   return (
     <nav>
       <ul>
@@ -24,8 +24,20 @@ const Navbar = () => {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
+        {!isLogedIn && (
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        )}
+
         <li>
-          {isLogedIn?<button className="logout-btn" onClick={handleLogout}>Logout</button>:<Link to="/signup">Sign up</Link>}
+          {isLogedIn ? (
+            <button className="logout-btn" onClick={handleLogout}>
+              Logout
+            </button>
+          ) : (
+            <Link to="/signup">Sign up</Link>
+          )}
         </li>
       </ul>
     </nav>
