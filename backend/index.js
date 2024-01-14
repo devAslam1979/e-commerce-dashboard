@@ -11,11 +11,8 @@ app.use(cors())
 app.post("/signup", async (req, res) => {
   const user = new User(req.body);
   const result = await user.save();
-  if (result._id) {
-    res.send("User created successfully!");
-  } else {
-    res.send("Error! Please try again!");
-  }
+  res.send(result);
+  
 });
 
 app.listen(5000);

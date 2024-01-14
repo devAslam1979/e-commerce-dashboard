@@ -9,7 +9,7 @@ nav ul {
 }
 nav ul li {
   margin-inline: 10px;
-  /* transition: all .1s ease-in-out; */
+  transition: all .05s ease-in-out;
 }
 nav a {
   color: white;
