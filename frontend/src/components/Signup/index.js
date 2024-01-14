@@ -13,7 +13,7 @@ const Signup = () => {
     if(isLogedIn){
       navigate('/')
     }
-  })
+  },[])
 
   
   const handleSignup = async (e) => {
