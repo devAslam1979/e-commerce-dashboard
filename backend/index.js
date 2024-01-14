@@ -15,7 +15,7 @@ app.post("/signup", async (req, res) => {
   delete result.password;
   res.send(result);
 });
-app.get("/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   if (req.body.email && req.body.password) {
     const user = await User.findOne({
       email: req.body.email,
@@ -25,7 +25,7 @@ app.get("/login", async (req, res) => {
       res.send(user);
     } else {
       res.send({
-        error: "User doesn't exist!",
+        error: "Invalid credentials!",
       });
     }
   }else{
