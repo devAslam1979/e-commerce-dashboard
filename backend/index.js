@@ -42,4 +42,9 @@ app.post('/add-product',async(req,res)=>{
   res.send(response)
 })
 
+app.post('/products',async(req,res)=>{
+  const result=await Product.find({userId:req.body.userId})
+  res.send(result)
+})
+
 app.listen(5000);
